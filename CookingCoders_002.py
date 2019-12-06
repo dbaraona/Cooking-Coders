@@ -3,10 +3,10 @@
 """
 Created on Wed Oct 23 18:20:10 2019
 
-Author: David Baraona
+Authors: David Baraona, Irene Corrin, Rylan Close, Chris Canty, Meg Eyen
 Course Number: DSCI 15310
 Section Number: 002
-Due Date: November 6, 2019
+Due Date: December 7, 2019
 """
 print(__doc__)
 
@@ -19,16 +19,27 @@ foodData = pd.read_csv("/Users/davidbaraona/Desktop/Group Project.csv")
 mylist = foodData['food'].tolist()
 priceList = foodData['price'].tolist()
 
-"""
 def cookBook():
-     
-    This function opens a menu which allows an imput to be entered. 
-    There is no argument though will accept a selection until option 8 is selected 
-    
+    """
+    The function cookBook() accepts no arguments and displays different
+    categories within a cookbook for the user to select a specific recipe
+    """
     print(cookBook.__doc__)
     
-    data = pd.read_csv("/Users/davidbaraona/Desktop/Recipe List.csv")
- 
+    cbData = pd.read_csv("/Users/davidbaraona/Desktop/Recipe List.csv")
+    
+    appsList = cbData['Appetizers'].tolist()
+    sandList = cbData['Sandwiches'].tolist()
+    soupList = cbData['Soups'].tolist()
+    meatlessList = cbData['Meatless'].tolist()
+    chickenList = cbData['Chicken'].tolist()
+    beefList = cbData['Beef'].tolist()
+    porkList = cbData['Pork'].tolist()
+    fishList = cbData['Fish'].tolist()
+    shellfishList = cbData['Shellfish'].tolist()
+    dessertList = cbData['Desserts'].tolist()
+    
+    
     endProgram = 'no'
     while endProgram == 'no':
             print ('0 for About:')
@@ -42,48 +53,110 @@ def cookBook():
             print ('8 for Fish: ')
             print ('9 for Shellfish: ')
             print ('10 for Desserts: ')
-            print ('11 for FastFood & Others:' )
-            print ('12 for Exit:')
+            print ('11 for Exit:')
             choice = int(input('enter your selection: '))
             if choice == 0:
-                print('')
+                print("\nThats It! The Unofficial FFXV Community Cookbook")
+                print("Page 2 has more information about the cookbook\n")
+                answer0 = input("Would you like to pick a recipe? yes/no: ")
+                if answer0 == 'yes':
+                    continue
+                else:
+                    break
             elif choice == 1:
-                
-                print 
+                print(appsList[1:10])
+                cbMeal1 = input("\nChoose your recipe: ")
+                print("\nClick on",cbMeal1, "in the cookbook contents and it will direct you to the recipe.")
+                answer1 = input("Would you like to pick another recipe? yes/no: ")
+                if answer1 == 'yes':
+                    continue
+                else:
+                    break
             elif choice == 2:
-                
-                print 
+                print(sandList[1:9])
+                cbMeal2 = input("\nChoose your recipe: ")
+                print("\nClick on",cbMeal2, "in the cookbook contents and it will direct you to the recipe.")
+                answer2 = input("Would you like to pick another recipe? yes/no: ")
+                if answer2 == 'yes':
+                    continue
+                else:
+                    break
             elif choice == 3:
-                 
-                print 
+                print(soupList[1:11])
+                cbMeal3 = input("\nChoose your recipe: ")
+                print("\nClick on",cbMeal3, "in the cookbook contents and it will direct you to the recipe.")
+                answer3 = input("Would you like to pick another recipe? yes/no: ")
+                if answer3 == 'yes':
+                    continue
+                else:
+                    break
             elif choice == 4:
-                
-                print 
-            elif choice == 4:
-                
-                print 
+                print(meatlessList[1:9])
+                cbMeal4 = input("\nChoose your recipe: ")
+                print("\nClick on",cbMeal4, "in the cookbook contents and it will direct you to the recipe.")
+                answer4 = input("Would you like to pick another recipe? yes/no: ")
+                if answer4 == 'yes':
+                    continue
+                else:
+                    break
             elif choice == 5:
-                
-                print 
+                print(chickenList[1:12])
+                cbMeal5 = input("\nChoose your recipe: ")
+                print("\nClick on",cbMeal5, "in the cookbook contents and it will direct you to the recipe.")
+                answer5 = input("Would you like to pick another recipe? yes/no: ")
+                if answer5 == 'yes':
+                    continue
+                else:
+                    break
+            elif choice == 6:
+                print(beefList[1:13])
+                cbMeal6 = input("\nChoose your recipe: ")
+                print("\nClick on",cbMeal6, "in the cookbook contents and it will direct you to the recipe.")
+                answer6 = input("Would you like to pick another recipe? yes/no: ")
+                if answer6 == 'yes':
+                    continue
+                else:
+                    break
             elif choice == 7:
-                
-                print
+                print(porkList[1:7])
+                cbMeal7 = input("\nChoose your recipe: ")
+                print("\nClick on",cbMeal7, "in the cookbook contents and it will direct you to the recipe.")
+                answer7 = input("Would you like to pick another recipe? yes/no: ")
+                if answer7 == 'yes':
+                    continue
+                else:
+                    break
             elif choice == 8:
-                
-                print
+                print(fishList[1:21])
+                cbMeal8 = input("\nChoose your recipe: ")
+                print("\nClick on",cbMeal8, "in the cookbook contents and it will direct you to the recipe.")
+                answer8 = input("Would you like to pick another recipe? yes/no: ")
+                if answer8 == 'yes':
+                    continue
+                else:
+                    break
             elif choice == 9:
-                
-                print
+                print(shellfishList[1:11])
+                cbMeal9 = input("\nChoose your recipe: ")
+                print("\nClick on",cbMeal9, "in the cookbook contents and it will direct you to the recipe.")
+                answer9 = input("Would you like to pick another recipe? yes/no: ")
+                if answer9 == 'yes':
+                    continue
+                else:
+                    break
             elif choice == 10:
-                
-                print
+                print(dessertList[1:8])
+                cbMeal10 = input("\nChoose your recipe: ")
+                print("\nClick on",cbMeal10, "in the cookbook contents and it will direct you to the recipe.")
+                answer10 = input("Would you like to pick another recipe? yes/no: ")
+                if answer10 == 'yes':
+                    continue
+                else:
+                    break
             elif choice == 11:
-                
-                print
-            elif choice == 12:
                 endProgram == 'yes'
-"""
-
+                break
+            
 def cheapMeal():
     """
     The function cheapMeal() accepts no arguments and performs the tasks
@@ -477,12 +550,3 @@ while option != 'no':
 
 
 
-
-
-
-
-
-
-
-
-    
